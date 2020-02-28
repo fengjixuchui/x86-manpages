@@ -18,12 +18,21 @@ See `x86-manpages(7)` for a list of instructions.
 
 ## Installation
 
+### Manually
 ```
 $ git clone https://github.com/ttmo-O/x86-manpages && cd x86-manpages
 # mkdir /usr/local/man/man7
 # cp manpages/* /usr/local/man/man7/
 ```
 or add "manpages" directory to your `MANPATH` environment variable.
+
+### Using AUR
+
+You can use AUR to get [x86-manpages-git](https://aur.archlinux.org/packages/x86-manpages-git/) package.
+
+### Using NIX
+
+Nix derivation is available via [https://github.com/blitz/x86-manpages-nix](https://github.com/blitz/x86-manpages-nix).
 
 ## Methodology
 
@@ -43,3 +52,7 @@ Maintainer gave up fixing bug-producing scripts, after he found out most of them
 ### Bugs
 
 Since scriptized, unhandled exceptions exist. Most of them related to tables; especially `rowspan`s. Nowadays, `rowspan-normalizer` script is missing th and tr rowspan normalizer functions. And also `[` and `]` and some other characters break tables; probably they must be escaped while the doc was still in the html form.
+
+## License
+
+See LICENSE file, which is for the scripts used to generate the man pages. `Copyleft` sign in the ready-to-use outputs in this repo does not claim any rights on the Intel's original documentation; and just stands for the conversion process made, and more than this, just for fun.
